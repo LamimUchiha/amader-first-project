@@ -16,8 +16,9 @@ const Banner = () => {
         <div className="text-center lg:text-left">
           <h1 className=" sm:text-4xl lg:text-5xl font-bold leading-tight">
           
-            <span className="block text-black text-7xl font-serif ">
-              Building Smart Digital Solutions
+            <span className="block text-black text-6xl  ">
+            
+              BUILDING SMART DIGITAL SOLUTIONS 
             </span>
         
             <span className="block text-orange-400">
