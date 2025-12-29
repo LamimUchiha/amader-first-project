@@ -1,5 +1,9 @@
 import Web_Developement_Pic from "../images/Web Developer Pic.jpg";
 import Graphics_Design_Pic from "../images/Graphics Design Pic .jpg";
+import E_Commerce_Pic from "../images/E Commerce.jpg"
+import Ai_Automation_Pic from "../images/AI Automation.jpg"
+import Custom_AI_Models_Pic from "../images/Custom AI Models.png"
+import Ai_Web_Intergration_Pic from "../images/AI Web Integration.png"
 
 const services = [
   {
@@ -15,22 +19,22 @@ const services = [
   {
     title: "E-commerce Solutions",
     desc: "Optimized product listings, store setup, and conversion-focused e-commerce systems.",
-    img: "https://img.daisyui.com/images/stock/photo-1556740749-887f6717d7e4.webp",
+    img: E_Commerce_Pic,
   },
   {
     title: "AI Automation",
     desc: "Workflow automation using AI to reduce manual work and increase operational efficiency.",
-    img: "https://img.daisyui.com/images/stock/photo-1535378917042-10a22c95931a.webp",
+    img: Ai_Automation_Pic ,
   },
   {
     title: "Custom AI Models",
     desc: "Business-specific AI models designed for analysis, intelligence, and decision support.",
-    img: "https://img.daisyui.com/images/stock/photo-1504384308090-c894fdcc538d.webp",
+    img: Custom_AI_Models_Pic ,
   },
   {
     title: "AI Web Integration",
     desc: "Seamless AI integration into websites, dashboards, and digital platforms.",
-    img: "https://img.daisyui.com/images/stock/photo-1498050108023-c5249f4df085.webp",
+    img:  Ai_Web_Intergration_Pic ,
   },
 ];
 
@@ -64,16 +68,16 @@ const Landingservice = () => {
             </figure>
 
             <div className="card-body bg-slate-50 p-5">
-              <h3 className="card-title text-orange-400  text-lg">
+              <h3 className="card-title text-black font-bold  text-lg">
                 {service.title}
               </h3>
 
-              <p className="text-sm leading-relaxed ">
+              <p className="text-black leading-relaxed text-sm " >
                 {service.desc}
               </p>
 
               <div className="card-actions justify-end mt-3">
-                <button className="btn btn-sm btn-outline btn-primary">
+                <button className="btn btn-sm btn-outline text-orange-400 hover:bg-green-300">
                   Learn More
                 </button>
               </div>
