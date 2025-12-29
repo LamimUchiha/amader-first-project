@@ -38,7 +38,7 @@ const services = [
   },
 ];
 
-const Landingservice = () => {
+const ServiceHome = () => {
   return (
     <section className="max-w-7xl mx-auto py-20">
       {/* Heading */}
@@ -77,7 +77,7 @@ const Landingservice = () => {
               </p>
 
               <div className="card-actions justify-end mt-3">
-                <button className="btn btn-sm btn-outline text-orange-400 hover:bg-green-300">
+                <button className="btn btn-sm border-none  text-white bg-green-400 hover:bg-green-300">
                   Learn More
                 </button>
               </div>
@@ -89,4 +89,4 @@ const Landingservice = () => {
   );
 };
 
-export default Landingservice;
+export default ServiceHome;

@@ -32,7 +32,7 @@ const Banner = () => {
             execution — we turn concepts into powerful digital experiences.
           </p>
 
-          <button className="btn bg-green-400 hover: bg-green-400">
+          <button className="btn text-black border-none bg-green-400 hover:bg-orange-400">
             Let’s Work Together
           </button>
         </div>

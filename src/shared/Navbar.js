@@ -1,5 +1,8 @@
 import { useState } from "react";
 import logo from "../images/Neuravixor logo 2.png";
+import { Link } from "react-router-dom";
+
+
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,10 +14,10 @@ function Navbar() {
     <div className="navbar bg-white shadow-sm px-4 relative">
 
       {/* Left - Logo & Mobile Menu */}
-      <div className="navbar-start">
+      <div className="navbar-start hover:bg-white">
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="btn btn-ghost lg:hidden"
+          className="btn btn-ghost lg:hidden hover: bg-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,24 +31,22 @@ function Navbar() {
         </button>
 
         {/* Logo (no outline, no focus ring) */}
-        <a
-          href="/"
-          className="btn btn-ghost normal-case focus:outline-none focus:ring-0 active:bg-transparent"
-        >
+        <Link to="/" className="btn btn-ghost normal-case focus:outline-none focus:ring-0 hover:bg-white active:bg-white">
+
           <img src={logo} alt="Neuravixor Logo" className="h-9 sm:h-10" />
-        </a>
+        </Link>
       </div>
 
       {/* Desktop Menu */}
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal gap-2 text-lg xl:text-xl font-medium">
-          <li><a className={navItemClass}>About Us</a></li>
-          <li><a className={navItemClass}>Service</a></li>
+          <li><Link to="/" className={navItemClass}>Home</Link></li>
+          <li><Link to="/services" className={navItemClass}>Service</Link></li>
           <li><a className={navItemClass}>Projects</a></li>
-          <li><a className={navItemClass}>Social Media</a></li>
           <li><a className={navItemClass}>Achievement</a></li>
           <li><a className={navItemClass}>Contact Us</a></li>
         </ul>
+
       </div>
 
       {/* Mobile Menu */}
