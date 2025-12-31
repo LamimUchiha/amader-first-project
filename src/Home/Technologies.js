@@ -5,6 +5,8 @@ import react from "../images/Code Logos/React.jpg";
 import tailwind from "../images/Code Logos/Talwind.jpg";
 import node from "../images/Code Logos/Node_js Logo PNG Vector (SVG) Free Download.jpg";
 
+
+
 const technologies = [
   { name: "HTML", img: html },
   { name: "CSS", img: css },

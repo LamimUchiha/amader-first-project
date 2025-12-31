@@ -5,40 +5,53 @@ import Ai_Automation_Pic from "../images/AI Automation.jpg"
 import Custom_AI_Models_Pic from "../images/Custom AI Models.png"
 import Ai_Web_Intergration_Pic from "../images/AI Web Integration.png"
 
+import { useNavigate } from "react-router-dom";
+
+
 const services = [
   {
     title: "Web Development",
     desc: "High-performance websites, landing pages, and business platforms built with modern technologies.",
     img: Web_Developement_Pic,
+    path: "/services/web-development",
   },
   {
     title: "Graphic Design",
     desc: "Branding, UI design, and social media visuals that communicate trust and authority.",
     img: Graphics_Design_Pic,
+    path: "/services/graphic-design",
   },
   {
     title: "E-commerce Solutions",
     desc: "Optimized product listings, store setup, and conversion-focused e-commerce systems.",
     img: E_Commerce_Pic,
+    path: "/services/ecommerce",
   },
   {
     title: "AI Automation",
     desc: "Workflow automation using AI to reduce manual work and increase operational efficiency.",
-    img: Ai_Automation_Pic ,
+    img: Ai_Automation_Pic,
+    path: "/services/ai-automation",
   },
   {
     title: "Custom AI Models",
     desc: "Business-specific AI models designed for analysis, intelligence, and decision support.",
-    img: Custom_AI_Models_Pic ,
+    img: Custom_AI_Models_Pic,
+    path: "/services/custom-ai-models",
   },
   {
     title: "AI Web Integration",
     desc: "Seamless AI integration into websites, dashboards, and digital platforms.",
-    img:  Ai_Web_Intergration_Pic ,
+    img: Ai_Web_Intergration_Pic,
+    path: "/services/ai-web-integration",
   },
 ];
 
 const ServiceHome = () => {
+
+  const navigate = useNavigate();
+
+
   return (
     <section className="max-w-7xl mx-auto py-20">
       {/* Heading */}
@@ -77,14 +90,23 @@ const ServiceHome = () => {
               </p>
 
               <div className="card-actions justify-end mt-3">
-                <button className="btn btn-sm border-none  text-white bg-green-400 hover:bg-green-300">
+                <button
+                  onClick={() => navigate(service.path)}
+                  className="btn btn-sm border-none text-white bg-green-400 hover:bg-green-300"
+                >
                   Learn More
                 </button>
+
               </div>
             </div>
           </div>
         ))}
       </div>
+
+
+
+
+
     </section>
   );
 };

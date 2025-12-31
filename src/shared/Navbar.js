@@ -11,7 +11,7 @@ function Navbar() {
     "text-black hover:text-orange-500 transition-colors duration-200";
 
   return (
-    <div className="navbar bg-white shadow-sm px-4 relative">
+    <div className="navbar bg-white  px-4 relative">
 
       {/* Left - Logo & Mobile Menu */}
       <div className="navbar-start hover:bg-white">
@@ -42,7 +42,7 @@ function Navbar() {
         <ul className="menu menu-horizontal gap-2 text-lg xl:text-xl font-medium">
           <li><Link to="/" className={navItemClass}>Home</Link></li>
           <li><Link to="/services" className={navItemClass}>Service</Link></li>
-          <li><a className={navItemClass}>Projects</a></li>
+          <li><Link to="/projects" className={navItemClass}>Projects</Link></li>
           <li><a className={navItemClass}>Achievement</a></li>
           <li><a className={navItemClass}>Contact Us</a></li>
         </ul>
@@ -54,8 +54,8 @@ function Navbar() {
         <div className="absolute top-full left-0 w-full bg-white shadow-md lg:hidden z-50">
           <ul className="menu p-4 text-base sm:text-lg font-medium">
             <li><a className={navItemClass}>About Us</a></li>
-            <li><a className={navItemClass}>Service</a></li>
-            <li><a className={navItemClass}>Projects</a></li>
+            <li><Link to="/services" className={navItemClass}>Service</Link></li>
+            <li><Link to="/projects" className={navItemClass}>Projects</Link></li>
             <li><a className={navItemClass}>Social Media</a></li>
             <li><a className={navItemClass}>Achievement</a></li>
             <li><a className={navItemClass}>Contact Us</a></li>
