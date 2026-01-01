@@ -41,10 +41,11 @@ function Navbar() {
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal gap-2 text-lg xl:text-xl font-medium">
           <li><Link to="/" className={navItemClass}>Home</Link></li>
-          <li><Link to="/services" className={navItemClass}>Service</Link></li>
+          <li><Link to="/services" className={navItemClass}>Service</Link></li> 
+          <li><Link to="/about-us" className={navItemClass}>About Us</Link></li>
           <li><Link to="/projects" className={navItemClass}>Projects</Link></li>
-          <li><a className={navItemClass}>Achievement</a></li>
-          <li><a className={navItemClass}>Contact Us</a></li>
+          <li><Link to="/contact-us" className={navItemClass}>Contact Us</Link></li>
+          
         </ul>
 
       </div>
@@ -56,7 +57,7 @@ function Navbar() {
             <li><a className={navItemClass}>About Us</a></li>
             <li><Link to="/services" className={navItemClass}>Service</Link></li>
             <li><Link to="/projects" className={navItemClass}>Projects</Link></li>
-            <li><a className={navItemClass}>Social Media</a></li>
+            
             <li><a className={navItemClass}>Achievement</a></li>
             <li><a className={navItemClass}>Contact Us</a></li>
           </ul>

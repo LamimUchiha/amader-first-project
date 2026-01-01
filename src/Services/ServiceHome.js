@@ -19,7 +19,7 @@ const services = [
     title: "Graphic Design",
     desc: "Branding, UI design, and social media visuals that communicate trust and authority.",
     img: Graphics_Design_Pic,
-    path: "/services/graphic-design",
+    path: "/services/graphics-design",
   },
   {
     title: "E-commerce Solutions",

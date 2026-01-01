@@ -3,6 +3,7 @@ import Landingservice from "./Landingservice";
 import PresenceSection from "./PresenceSection";
 import FloatingBubbles from "./FloatingBubbles";
 import Technologies from "./Technologies";
+import LandingProjects from "./LandingProjects";
 
 const Home = () => {
   return (
@@ -15,8 +16,9 @@ const Home = () => {
         <Banner />
         <Landingservice />
         <Technologies></Technologies>
-        <PresenceSection />
         
+        <LandingProjects></LandingProjects>
+        <PresenceSection></PresenceSection>
       </div>
     </div>
   );
