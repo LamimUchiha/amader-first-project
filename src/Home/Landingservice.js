@@ -49,44 +49,44 @@ const Landingservice = () => {
     <section className="max-w-7xl mx-auto py-20">
       {/* Heading */}
       <div className="text-center mb-10">
-        <h2 className=" text-4xl font-bold  text-orange-400 mb-2">OUR SERVICES</h2>
-        <p className="mt-2 max-w-2xl mx-auto text-black">
+        <h2 className="text-4xl font-bold text-orange-400 mb-2">OUR SERVICES</h2>
+        <p className="mt-2 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
           We provide intelligent digital solutions that combine design,
           development, e-commerce, and AI automation.
         </p>
       </div>
 
       {/* Service Cards */}
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-3 gap-8 px-4">
         {services.map((service, index) => (
           <div
             key={index}
-            className="card bg-white shadow-lg transition-all duration-300
-                       hover:-translate-y-1 hover:shadow-xl"
+            className="card bg-white dark:bg-zinc-800 shadow-lg border border-transparent dark:border-zinc-700 transition-all duration-300
+                       hover:-translate-y-1 hover:shadow-xl hover:border-orange-400/30"
           >
-            <figure className="bg-white p-3">
+            <figure className="bg-transparent p-3">
               <img
                 src={service.img}
                 alt={service.title}
-                className="w-full max-h-36 object-contain
+                className="w-full max-h-36 object-contain rounded-lg
                            transition-transform duration-300 hover:scale-105"
               />
             </figure>
 
-            <div className="card-body bg-white p-5">
-              <h3 className="card-title text-black font-bold  text-lg">
+            <div className="card-body p-5">
+              <h3 className="card-title text-black dark:text-white font-bold text-lg">
                 {service.title}
               </h3>
 
-              <p className="text-black leading-relaxed text-sm " >
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
                 {service.desc}
               </p>
 
               <div className="card-actions justify-end mt-3">
                 <button
-                  onClick={() => navigate(service.path)}
-                  className="btn btn-sm btn-outline text-orange-400 hover:bg-green-300">
-
+                  onClick={() => service.path && navigate(service.path)}
+                  className="btn btn-sm btn-outline border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white hover:border-orange-400"
+                >
                   Learn More
                 </button>
               </div>

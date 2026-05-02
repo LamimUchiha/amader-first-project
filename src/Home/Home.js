@@ -12,7 +12,7 @@ const Home = () => {
       <FloatingBubbles />
 
       {/* CONTENT ABOVE BUBBLES */}
-      <div className="bg-green-50 relative z-10">
+      <div className="bg-green-50 dark:bg-transparent relative z-10 transition-colors duration-300">
         <Banner />
         <Landingservice />
         <Technologies></Technologies>

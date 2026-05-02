@@ -1,20 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { HiSun, HiMoon } from "react-icons/hi";
 import logo from "../images/Neuravixor logo 2.png";
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark" || 
+           (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  });
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDarkMode]);
+
+  const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   const navItemClass =
-    "text-black hover:text-orange-500 transition-colors duration-200";
+    "text-black dark:text-gray-200 hover:text-orange-500 transition-colors duration-200";
 
   return (
-    <div className="navbar bg-white shadow-sm px-4 relative">
+    <div className="navbar bg-white dark:bg-zinc-900 shadow-sm px-4 relative transition-colors duration-300">
 
       {/* Left - Logo & Mobile Menu */}
       <div className="navbar-start">
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="btn btn-ghost lg:hidden"
+          className="btn btn-ghost lg:hidden dark:text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,34 +46,50 @@ function Navbar() {
         </button>
 
         {/* Logo (no outline, no focus ring) */}
-        <a
-          href="/"
+        <Link
+          to="/"
           className="btn btn-ghost normal-case focus:outline-none focus:ring-0 active:bg-transparent"
         >
-          <img src={logo} alt="Neuravixor Logo" className="h-9 sm:h-10" />
-        </a>
+          <img src={logo} alt="Neuravixor Logo" className="h-9 sm:h-10 dark:invert" />
+        </Link>
       </div>
 
       {/* Desktop Menu */}
-      <div className="navbar-end hidden lg:flex">
+      <div className="navbar-end hidden lg:flex items-center gap-4">
         <ul className="menu menu-horizontal gap-2 text-lg xl:text-xl font-medium">
-          <li><a className={navItemClass}>About Us</a></li>
-          <li><a className={navItemClass}>Service</a></li>
-          <li><a className={navItemClass}>Projects</a></li>
-          <li><a className={navItemClass}>Contact Us</a></li>
+          <li><Link to="/about" className={navItemClass}>About Us</Link></li>
+          <li><Link to="/services" className={navItemClass}>Service</Link></li>
+          <li><Link to="/projects" className={navItemClass}>Projects</Link></li>
+          <li><Link to="/contact" className={navItemClass}>Contact Us</Link></li>
         </ul>
+
+        {/* Theme Toggle Button */}
+        <button
+          onClick={toggleTheme}
+          className="btn btn-ghost btn-circle text-2xl text-orange-500 hover:bg-orange-100 dark:hover:bg-zinc-800 transition-all duration-300"
+        >
+          {isDarkMode ? <HiSun /> : <HiMoon />}
+        </button>
+      </div>
+
+      {/* Mobile Theme Toggle (Visible only on mobile) */}
+      <div className="lg:hidden flex-none">
+        <button
+          onClick={toggleTheme}
+          className="btn btn-ghost btn-circle text-2xl text-orange-500 transition-all"
+        >
+          {isDarkMode ? <HiSun /> : <HiMoon />}
+        </button>
       </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-md lg:hidden z-50">
+        <div className="absolute top-full left-0 w-full bg-white dark:bg-zinc-900 shadow-md lg:hidden z-50 transition-colors duration-300">
           <ul className="menu p-4 text-base sm:text-lg font-medium">
-            <li><a className={navItemClass}>About Us</a></li>
-            <li><a className={navItemClass}>Service</a></li>
-            <li><a className={navItemClass}>Projects</a></li>
-            
-            
-            <li><a className={navItemClass}>Contact Us</a></li>
+            <li><Link to="/about" className={navItemClass} onClick={() => setMobileMenuOpen(false)}>About Us</Link></li>
+            <li><Link to="/services" className={navItemClass} onClick={() => setMobileMenuOpen(false)}>Service</Link></li>
+            <li><Link to="/projects" className={navItemClass} onClick={() => setMobileMenuOpen(false)}>Projects</Link></li>
+            <li><Link to="/contact" className={navItemClass} onClick={() => setMobileMenuOpen(false)}>Contact Us</Link></li>
           </ul>
         </div>
       )}
