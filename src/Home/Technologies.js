@@ -55,7 +55,7 @@ const TechnologiesSection = () => {
                   <div
                     className="w-20 h-20 rounded-full border border-gray-200
                     flex items-center justify-center
-                    shadow-sm transition-all duration-300
+                    shadow-sm transition-all duration-300 bg-slate
                     hover:shadow-lg hover:-translate-y-1"
                   >
                     <img

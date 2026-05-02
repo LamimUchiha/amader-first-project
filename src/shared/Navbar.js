@@ -42,8 +42,6 @@ function Navbar() {
           <li><a className={navItemClass}>About Us</a></li>
           <li><a className={navItemClass}>Service</a></li>
           <li><a className={navItemClass}>Projects</a></li>
-          <li><a className={navItemClass}>Social Media</a></li>
-          <li><a className={navItemClass}>Achievement</a></li>
           <li><a className={navItemClass}>Contact Us</a></li>
         </ul>
       </div>
@@ -55,8 +53,8 @@ function Navbar() {
             <li><a className={navItemClass}>About Us</a></li>
             <li><a className={navItemClass}>Service</a></li>
             <li><a className={navItemClass}>Projects</a></li>
-            <li><a className={navItemClass}>Social Media</a></li>
-            <li><a className={navItemClass}>Achievement</a></li>
+            
+            
             <li><a className={navItemClass}>Contact Us</a></li>
           </ul>
         </div>

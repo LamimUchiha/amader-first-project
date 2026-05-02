@@ -1,8 +1,8 @@
-import facebook from "../images/facebook.jpg";
-import linkedin from "../images/linkedin.jpg";
-import github from "../images/github.jpg";
-import fiverr from "../images/fiverr.jpg";
-import upwork from "../images/upwork.jpg";
+import facebook from "../images/Presence Section/facebook.jpg";
+import linkedin from "../images/Presence Section/linkedin.jpg";
+import github from "../images/Presence Section/github.jpg";
+import fiverr from "../images/Presence Section/fiverr.jpg";
+import upwork from "../images/Presence Section/upwork.jpg";
 
 const platforms = [
   { name: "Facebook", img: facebook, link: "https://facebook.com/yourpage" },

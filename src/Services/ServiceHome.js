@@ -4,6 +4,7 @@ import E_Commerce_Pic from "../images/Landing Service/E Commerce.jpg"
 import Ai_Automation_Pic from "../images/Landing Service/AI Automation.jpg"
 import Custom_AI_Models_Pic from "../images/Landing Service/Custom AI Models.png"
 import Ai_Web_Intergration_Pic from "../images/Landing Service/AI Web Integration.png"
+
 import { useNavigate } from "react-router-dom";
 
 
@@ -18,39 +19,45 @@ const services = [
     title: "Graphic Design",
     desc: "Branding, UI design, and social media visuals that communicate trust and authority.",
     img: Graphics_Design_Pic,
+    path: "/services/graphic-design",
   },
   {
     title: "E-commerce Solutions",
     desc: "Optimized product listings, store setup, and conversion-focused e-commerce systems.",
     img: E_Commerce_Pic,
+    path: "/services/ecommerce",
   },
   {
     title: "AI Automation",
     desc: "Workflow automation using AI to reduce manual work and increase operational efficiency.",
     img: Ai_Automation_Pic,
+    path: "/services/ai-automation",
   },
   {
     title: "Custom AI Models",
     desc: "Business-specific AI models designed for analysis, intelligence, and decision support.",
     img: Custom_AI_Models_Pic,
+    path: "/services/custom-ai-models",
   },
   {
     title: "AI Web Integration",
     desc: "Seamless AI integration into websites, dashboards, and digital platforms.",
     img: Ai_Web_Intergration_Pic,
+    path: "/services/ai-web-integration",
   },
 ];
 
-const Landingservice = () => {
+const ServiceHome = () => {
 
   const navigate = useNavigate();
+
 
   return (
     <section className="max-w-7xl mx-auto py-20">
       {/* Heading */}
-      <div className="text-center mb-10">
-        <h2 className=" text-4xl font-bold  text-orange-400 mb-2">OUR SERVICES</h2>
-        <p className="mt-2 max-w-2xl mx-auto text-black">
+      <div className="text-center mb-12">
+        <h2 className=" text-5xl font-bold  text-black mb-12">OUR SERVICES</h2>
+        <p className="mt-3 max-w-2xl mx-auto text-black">
           We provide intelligent digital solutions that combine design,
           development, e-commerce, and AI automation.
         </p>
@@ -85,17 +92,23 @@ const Landingservice = () => {
               <div className="card-actions justify-end mt-3">
                 <button
                   onClick={() => navigate(service.path)}
-                  className="btn btn-sm btn-outline text-orange-400 hover:bg-green-300">
-
+                  className="btn btn-sm border-none text-white bg-green-400 hover:bg-green-300"
+                >
                   Learn More
                 </button>
+
               </div>
             </div>
           </div>
         ))}
       </div>
+
+
+
+
+
     </section>
   );
 };
 
-export default Landingservice;
+export default ServiceHome;

@@ -4,6 +4,7 @@ import PresenceSection from "./PresenceSection";
 import FloatingBubbles from "./FloatingBubbles";
 import Technologies from "./Technologies";
 
+
 const Home = () => {
   return (
     <div className="relative">
@@ -11,11 +12,12 @@ const Home = () => {
       <FloatingBubbles />
 
       {/* CONTENT ABOVE BUBBLES */}
-      <div className="relative z-10">
+      <div className="bg-green-50 relative z-10">
         <Banner />
         <Landingservice />
         <Technologies></Technologies>
         <PresenceSection />
+        
         
       </div>
     </div>
